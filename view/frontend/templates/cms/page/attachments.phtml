@@ -1,0 +1,17 @@
+<?php 
+/**
+ * Attachments
+ * 
+ * @author Slava Yurthev
+ */
+?>
+<?php if($this->getCollection()->count()>0): ?>
+	<h1><?php echo __('Attachments'); ?></h1>
+	<ul>
+		<?php foreach($this->getCollection() as $attachment): ?>
+			<li>
+				<a href="<?php echo $attachment->getUrl(); ?>"><?php echo $attachment->getData('filename'); ?></a>
+			</li>
+		<?php endforeach; ?>
+	</ul>
+<?php endif; ?>

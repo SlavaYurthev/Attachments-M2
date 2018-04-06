@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Attachments
+ * 
+ * @author Slava Yurthev
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceBlock name="content">
+			<block class="SY\Attachments\Block\Cms\Page\Attachments" name="page.attachments" template="SY_Attachments::cms/page/attachments.phtml" after="-" ifconfig="sy_attachments/general/active" />
+		</referenceBlock>
+	</body>
+</page>

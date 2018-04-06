@@ -1,0 +1,29 @@
+<?php
+/**
+ * Attachments
+ * 
+ * @author Slava Yurthev
+ */
+$blockGrid = $block->getBlockGrid();
+$gridJsObjectName = $blockGrid->getJsObjectName();
+?>
+<?php echo $block->getGridHtml(); ?>
+<input type="hidden" name="<?php echo $block->getFieldScopeName(); ?>" id="sy_attachments_hidden_input" data-form-part="<?php echo $block->getFormName(); ?>" value="" />
+<script type="text/x-magento-init">
+	{
+		"*": {
+			"SY_Attachments/js/attachments/grid": {
+				"selectedAttachments": <?php echo $block->getSelectedJson(); ?>,
+				"gridJsObjectName": <?php echo '"' . $gridJsObjectName . '"' ?: '{}'; ?>
+			}
+		}
+	}
+</script>
+<script>
+	require('mage/apply/main').apply();
+</script>
+<style type="text/css">
+#<?php echo $block->escapeHtml($blockGrid->getId()) ?> .admin__data-grid-wrap-static {
+	overflow-x: visible;
+}
+</style>
