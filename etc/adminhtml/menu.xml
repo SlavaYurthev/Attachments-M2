@@ -36,7 +36,7 @@
 			 title="Files"
 			 module="SY_Attachments" 
 			 sortOrder="0"
-			 parent="SY_Attachments::section"
+			 parent="SY::core"
 			 action="sy_attachments/files"
 			 resource="SY_Attachments::files" />
 	</menu>
